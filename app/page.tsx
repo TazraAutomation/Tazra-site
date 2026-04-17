@@ -115,19 +115,35 @@ const features = [
 
 export default function Home() {
   return (
+    <>
+  <nav className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur">
+    <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      
+      <p className="text-sm font-light tracking-[0.2em] text-white">
+        TAZRA
+      </p>
+
+      <div className="hidden md:flex items-center gap-6 text-sm text-slate-300">
+        <a href="#services" className="hover:text-white transition">Services</a>
+        <a href="#process" className="hover:text-white transition">Process</a>
+        <a href="#contact" className="hover:text-white transition">Contact</a>
+      </div>
+
+    </div>
+  </nav>
     <div className="min-h-screen bg-slate-950 text-white">
-      <section className="relative overflow-hidden border-b border-white/10">
+      <section id="hero" className="relative overflow-hidden border-b border-white/10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.18),transparent_30%),radial-gradient(circle_at_top_left,rgba(16,185,129,0.16),transparent_25%)]" />
         <div className="relative mx-auto max-w-7xl px-6 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/10 ring-1 ring-white/15">
-                <Shield className="h-5 w-5" />
+                <img src="/logo.png" alt="logo" className="h-12 w-12" />
               </div>
               <div>
-                <p className="text-lg font-semibold tracking-wide">Tazra</p>
+                <p className="text-lg font-light tracking-wide">TAZRA</p>
                 <p className="text-xs uppercase tracking-[0.22em] text-slate-300">
-                  Technology Risk & Cyber
+                  Technology Risk 
                 </p>
               </div>
             </div>
@@ -136,8 +152,8 @@ export default function Home() {
           <div className="grid gap-12 py-20 md:grid-cols-2 md:items-center md:py-28">
             <div>
               <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-400/25 bg-cyan-400/10 px-4 py-2 text-sm text-cyan-100">
-                <AlertTriangle className="h-4 w-4" />
-                Modern businesses run on technology
+                <Lock className="h-4 w-4" />
+                Navigating risk in the new era of technology
               </div>
 
               <h1 className="max-w-2xl text-4xl font-semibold leading-tight tracking-tight text-white md:text-6xl">
@@ -212,7 +228,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20">
+      <section id="services" className="mx-auto max-w-7xl px-6 py-20">
         <div className="max-w-2xl">
           <p className="text-sm font-medium uppercase tracking-[0.22em] text-cyan-300">
             Solutions
@@ -245,7 +261,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20">
+      <section id="Clients" className="mx-auto max-w-7xl px-6 py-20">
         <div className="max-w-2xl">
           <p className="text-sm font-medium uppercase tracking-[0.22em] text-cyan-300">
             Beyond Insurance
@@ -304,7 +320,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20">
+      <section id="process" className="mx-auto max-w-7xl px-6 py-20">
         <div className="max-w-2xl">
           <p className="text-sm font-medium uppercase tracking-[0.22em] text-cyan-300">
             How It Works
@@ -332,7 +348,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-t border-white/10 bg-slate-900">
+      <section id="contact" className="border-t border-white/10 bg-slate-900">
         <div className="mx-auto max-w-7xl px-6 py-20">
           <div className="grid gap-10 md:grid-cols-[1.2fr_0.8fr] md:items-center">
             <div>
@@ -361,11 +377,11 @@ export default function Home() {
                 <div className="mt-6 space-y-4 text-sm text-slate-300">
                   <div className="flex items-center gap-3 rounded-2xl border border-white/10 px-4 py-4">
                     <PhoneCall className="h-4 w-4 text-cyan-300" />
-                    <span>(000) 000-0000</span>
+                    <span>(972) 656-3781</span>
                   </div>
                   <div className="flex items-center gap-3 rounded-2xl border border-white/10 px-4 py-4">
                     <Mail className="h-4 w-4 text-cyan-300" />
-                    <span>hello@tazra.io</span>
+                    <span>info@tazra.io</span>
                   </div>
                   <div className="flex items-center gap-3 rounded-2xl border border-white/10 px-4 py-4">
                     <Globe className="h-4 w-4 text-cyan-300" />
@@ -377,6 +393,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
+          </div>
+    </>
   );
 }
